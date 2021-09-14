@@ -207,5 +207,18 @@ $(function(){
 			{
 				$( '.imagelightbox-arrow' ).remove();
 			};
+            //ask (1:1문의하기)
+            var ask_sw=0;
+            $('.ask_title').click(function(){
+                if(ask_sw==0){
+                    ask_sw=1;
+                    $(this).find('span').css('background-position','top right');
+                    $('.ask_con').slideDown();
+                }else{
+                    ask_sw=0;
+                    $(this).find('span').css('background-position','top left');
+                    $('.ask_con').slideUp();
+                }
+            });
 
 });
